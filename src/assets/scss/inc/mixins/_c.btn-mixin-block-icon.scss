@@ -1,0 +1,32 @@
+// * ---------------------------------------------------------------------------    
+// 
+//       __ __  __
+//     /  /   /   /     __/__/__
+//     \ /   /   /  __   /  /  __  (/__
+//      /   /   / /  /  /  /  /__) /  /
+//     /   /   / (__/__/_ /__/____/  /_/
+//             \
+//               SOLUTIONS
+// 
+// 
+//	=Module - Btn / Buttons - Block icon
+//
+// 	Block icon button style
+//
+// ---------------------------------------------------------------------------- */
+
+@mixin mk-create-btn--block-icon( $bg, $bg--hover, $text, $text--hover ) {
+
+	padding-top: 2em;
+	padding-bottom: 2em;
+
+	.o-icon {
+
+		display: block;
+		width: 100%;
+		margin-bottom: .25em;
+		font-size: 2em;
+
+	}
+
+}

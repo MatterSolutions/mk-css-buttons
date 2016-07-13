@@ -1,0 +1,34 @@
+// * ---------------------------------------------------------------------------    
+// 
+//       __ __  __
+//     /  /   /   /     __/__/__
+//     \ /   /   /  __   /  /  __  (/__
+//      /   /   / /  /  /  /  /__) /  /
+//     /   /   / (__/__/_ /__/____/  /_/
+//             \
+//               SOLUTIONS
+// 
+// 
+//	=Module - Btn / Buttons - Square
+//
+// 	Square button style
+//
+// ---------------------------------------------------------------------------- */
+
+@mixin mk-create-btn--square( $bg, $bg--hover, $text, $text--hover ) {
+
+	height: 3em;
+	padding: 0;
+	position: relative;
+	width: 3em;
+
+	.o-icon {
+
+		left: 50%;
+		position: absolute;
+		top: 50%;
+		transform: translate( -50%, -50% );
+
+	}
+
+}

@@ -1,0 +1,28 @@
+// * ---------------------------------------------------------------------------    
+// 
+//       __ __  __
+//     /  /   /   /     __/__/__
+//     \ /   /   /  __   /  /  __  (/__
+//      /   /   / /  /  /  /  /__) /  /
+//     /   /   / (__/__/_ /__/____/  /_/
+//             \
+//               SOLUTIONS
+// 
+// 
+//	=Module - Btn / Buttons - Subtle Shadow
+//
+// 	Subtle shadowed button style
+//
+// ---------------------------------------------------------------------------- */
+
+@mixin mk-create-btn--subtle-shadow( $bg, $bg--hover, $text, $text--hover, $accent, $misc ) {
+
+	box-shadow: 0 .2em .1em -.1em rgba( $misc, .25 );
+
+	&:hover {
+
+		box-shadow: 0 .2em .1em -.1em rgba( $misc, .125 );
+
+	}
+
+}

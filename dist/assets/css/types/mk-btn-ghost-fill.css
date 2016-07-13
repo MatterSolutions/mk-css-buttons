@@ -1,0 +1,50 @@
+.mk-btn {
+  font-family: inherit;
+  font-size: 1em;
+  font-weight: bold;
+  text-transform: uppercase; }
+
+.mk-btn--ghost-fill-emerald {
+  border: 2px solid transparent;
+  cursor: pointer;
+  display: inline-block;
+  outline: none;
+  padding: 0.75em 1.5em;
+  text-align: center;
+  text-decoration: none;
+  width: auto;
+  -webkit-appearance: none; }
+
+.mk-btn--ghost-fill-emerald {
+  background-color: transparent;
+  border-color: #2ecc71;
+  color: #2ecc71;
+  transition: all .2s ease;
+  overflow: hidden;
+  position: relative; }
+.mk-btn--ghost-fill-emerald:hover, .mk-btn--ghost-fill-emerald:active {
+  background-color: #27ae60;
+  border-color: #27ae60;
+  color: #fff; }
+.mk-btn--ghost-fill-emerald:hover, .mk-btn--ghost-fill-emerald:active {
+  background-color: transparent;
+  border-color: #27ae60;
+  color: #fff; }
+.mk-btn--ghost-fill-emerald:before {
+  background-color: #27ae60;
+  content: "";
+  display: inline-block;
+  height: 110%;
+  left: 50%;
+  opacity: 0;
+  position: absolute;
+  top: -5%;
+  transform: translateX(-50%);
+  transition: all .2s ease;
+  width: 0;
+  z-index: -1; }
+.mk-btn--ghost-fill-emerald:hover:before {
+  opacity: 1;
+  width: 110%; }
+
+/*# sourceMappingURL=mk-btn-ghost-fill.css.map */

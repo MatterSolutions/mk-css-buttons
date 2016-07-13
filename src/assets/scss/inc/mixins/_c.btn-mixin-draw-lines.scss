@@ -1,0 +1,86 @@
+// * ---------------------------------------------------------------------------    
+// 
+//       __ __  __
+//     /  /   /   /     __/__/__
+//     \ /   /   /  __   /  /  __  (/__
+//      /   /   / /  /  /  /  /__) /  /
+//     /   /   / (__/__/_ /__/____/  /_/
+//             \
+//               SOLUTIONS
+// 
+// 
+//	=Module - Btn / Buttons - Draw lines
+//
+// 	Draw lines button style
+//
+// ---------------------------------------------------------------------------- */
+
+@mixin mk-create-btn--draw-lines( $bg, $bg--hover, $text, $text--hover ) {
+
+	background-color: transparent;
+	border-color: transparent;
+	color: $text;
+	position: relative;
+
+	&:before,
+	&:after {
+
+		content: "";
+		display: inline-block;
+		left: 50%;
+		position: absolute;
+		top: 50%;
+		transform: translate( -50%, -50% );
+		transition: width .3s ease, height .3s ease;
+		opacity: 0;
+
+	}
+
+	&:before {
+
+		height: 100%;
+		width: 0;
+		border-top: 2px solid $text--hover;
+		border-bottom: 2px solid $text--hover;
+
+	}
+
+	&:after {
+
+		height: 0;
+		width: 100%;
+		border-left: 2px solid $text--hover;
+		border-right: 2px solid $text--hover;
+
+	}
+
+	&:hover,
+	&:active {
+
+		background-color: transparent;
+		border-color: transparent;
+		color: $text--hover;
+
+		&:before,
+		&:after {
+
+			opacity: 1;
+
+		}
+
+		&:before {
+
+			width: 100%;
+
+		}
+
+
+		&:after {
+
+			height: 100%;
+
+		}
+
+	}
+
+}

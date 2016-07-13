@@ -1,0 +1,78 @@
+// * ---------------------------------------------------------------------------    
+// 
+//       __ __  __
+//     /  /   /   /     __/__/__
+//     \ /   /   /  __   /  /  __  (/__
+//      /   /   / /  /  /  /  /__) /  /
+//     /   /   / (__/__/_ /__/____/  /_/
+//             \
+//               SOLUTIONS
+// 
+// 
+//	=Module - Btn / Buttons - Sweep
+//
+// 	Sweep button style/effect
+//
+// ---------------------------------------------------------------------------- */
+
+@mixin mk-create-btn--sweep( $bg, $bg--hover, $text, $text--hover, $accent, $misc ) {
+
+	background-color: rgba( $bg, .25 );
+	color: $text;
+	overflow: hidden;
+	position: relative;
+	transition: all .5s ease;
+
+	&:before,
+	&:after {
+
+		content: "";
+		display: inline-block;
+		height: 100%;
+		left: 0;
+		position: absolute;
+		top: 0;
+		width: 100%;
+
+	}
+
+	&:before {
+
+		background-color: $bg;
+		transition: all .5s ease;
+		z-index: -2;
+
+	}
+
+	&:after {
+
+		background-color: rgba( $bg, .5 );
+		transition: all .25s ease;
+		z-index: -1;
+
+	}
+
+	&:hover,
+	&:active {
+
+		background-color: rgba( $bg--hover, .1 );
+		color: $text--hover;
+		padding-left: 2.25em;
+		padding-right: 0.75em;
+
+		&:before {
+
+			width: .5em;
+
+		}
+
+
+		&:after {
+
+			width: 1em;
+
+		}
+
+	}
+
+}

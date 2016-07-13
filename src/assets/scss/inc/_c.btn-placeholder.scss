@@ -1,0 +1,53 @@
+// * ---------------------------------------------------------------------------    
+// 
+//       __ __  __
+//     /  /   /   /     __/__/__
+//     \ /   /   /  __   /  /  __  (/__
+//      /   /   / /  /  /  /  /__) /  /
+//     /   /   / (__/__/_ /__/____/  /_/
+//             \
+//               SOLUTIONS
+// 
+// 
+//	=Module - Btn / Buttons - Placeholder
+//
+// 	Create a placeholder selector for the base btn component styles
+//
+// ---------------------------------------------------------------------------- */
+
+@if ( var_exists( $mk-btn-output-all-colours ) and $mk-btn-output-all-colours == null ) {
+
+	.#{ $mk-component-btn-name } {
+
+		font-family: inherit;
+		font-size: 1em;
+		font-weight: bold;
+		text-transform: uppercase;
+
+	}
+
+}
+
+
+@mixin mk-base-btn( $border-size: 2px, $border-style: solid, $padding: .75em  1.5em ) {
+
+	border: $border-size $border-style transparent;
+	cursor: pointer;
+	display: inline-block;
+	outline: none;
+	padding: $padding;
+	text-align: center;
+	text-decoration: none;
+	width: auto;
+
+	// Set this to force iPads to use standard btn styles
+	-webkit-appearance: none;
+
+}
+
+
+%#{ $mk-component-btn-name } {
+
+	@include mk-base-btn();
+
+}

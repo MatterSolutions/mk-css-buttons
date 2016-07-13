@@ -1,2 +1,2 @@
-# mk-css-buttons
-Simple sassy CSS buttons and effects
+# Matter Kit CSS Buttons
+Simple sassy CSS buttons and effects. Use the CSS in the dist/ folder if you want to use the button styles as-is. If you want to roll your own styles, use the scss files provided in src/

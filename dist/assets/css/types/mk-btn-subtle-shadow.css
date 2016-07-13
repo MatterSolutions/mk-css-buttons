@@ -1,0 +1,30 @@
+.mk-btn {
+  font-family: inherit;
+  font-size: 1em;
+  font-weight: bold;
+  text-transform: uppercase; }
+
+.mk-btn--subtle-shadow-emerald {
+  border: 2px solid transparent;
+  cursor: pointer;
+  display: inline-block;
+  outline: none;
+  padding: 0.75em 1.5em;
+  text-align: center;
+  text-decoration: none;
+  width: auto;
+  -webkit-appearance: none; }
+
+.mk-btn--subtle-shadow-emerald {
+  background-color: #2ecc71;
+  border-color: #2ecc71;
+  color: #ffffff;
+  box-shadow: 0 0.2em 0.1em -0.1em rgba(0, 0, 0, 0.25); }
+.mk-btn--subtle-shadow-emerald:hover, .mk-btn--subtle-shadow-emerald:active {
+  background-color: #27ae60;
+  border-color: #27ae60;
+  color: #ffffff; }
+.mk-btn--subtle-shadow-emerald:hover {
+  box-shadow: 0 0.2em 0.1em -0.1em rgba(0, 0, 0, 0.125); }
+
+/*# sourceMappingURL=mk-btn-subtle-shadow.css.map */

@@ -1,0 +1,33 @@
+// * ---------------------------------------------------------------------------    
+// 
+//       __ __  __
+//     /  /   /   /     __/__/__
+//     \ /   /   /  __   /  /  __  (/__
+//      /   /   / /  /  /  /  /__) /  /
+//     /   /   / (__/__/_ /__/____/  /_/
+//             \
+//               SOLUTIONS
+// 
+// 
+//	=Module - Btn / Buttons - Vanilla
+//
+// 	Ultra basic button style
+//
+// ---------------------------------------------------------------------------- */
+
+@mixin mk-create-btn--vanilla( $bg, $bg--hover, $text, $text--hover ) {
+
+	background-color: $bg;
+	border-color: $bg;
+	color: $text;
+
+	&:hover,
+	&:active {
+
+		background-color: $bg--hover;
+		border-color: $bg--hover;
+		color: $text--hover;
+
+	}
+
+}

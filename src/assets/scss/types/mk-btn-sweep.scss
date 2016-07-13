@@ -1,0 +1,98 @@
+// * ---------------------------------------------------------------------------    
+// 
+//       __ __  __
+//     /  /   /   /     __/__/__
+//     \ /   /   /  __   /  /  __  (/__
+//      /   /   / /  /  /  /  /__) /  /
+//     /   /   / (__/__/_ /__/____/  /_/
+//             \
+//               SOLUTIONS
+// 
+// 
+//	=Module - Btn / Buttons - Sweep
+//
+// 	Sweep button style
+//
+// ---------------------------------------------------------------------------- */
+
+
+// Include dependencies
+@import '../inc/c.btn-dependencies';
+
+
+// Begin outputting the component
+.#{ $mk-component-btn-name } {
+
+	&--sweep {
+
+		@if ( var_exists( $mk-btn-output-all-colours ) and $mk-btn-output-all-colours == true ) {
+
+			@include mk-base-btn();
+
+			@each $colour, $palette in $mk-component-btn-colors {
+
+				&-#{ $colour } {
+
+					@include mk-create-btn( 
+			
+						// Type
+						sweep,
+
+						// BG colours
+						map-get( $palette, bg ),
+						map-get( $palette, bg--hover ),
+
+						// Text colours
+						map-get( $palette, text ),
+						map-get( $palette, bg ),
+
+						// Accent
+						map-get( $palette, accent ),
+
+						// Misc
+						map-get( $palette, misc )
+
+					);
+
+				}
+
+			}
+
+		}
+
+		@else {
+
+			&-emerald {
+
+				$palette: map-get( $mk-component-btn-colors, emerald );
+
+				@include mk-create-btn( 
+			
+					// Type
+					sweep,
+
+					// BG colours
+					map-get( $palette, bg ),
+					map-get( $palette, bg--hover ),
+
+					// Text colours
+					map-get( $palette, text ),
+					map-get( $palette, bg ),
+
+					// Accent
+					map-get( $palette, accent ),
+
+					// Misc
+					map-get( $palette, misc )
+
+				);
+
+			}
+
+		}
+
+		border: none !important;
+
+	} // sweep
+
+}

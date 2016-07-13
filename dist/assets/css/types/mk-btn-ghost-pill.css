@@ -1,0 +1,29 @@
+.mk-btn {
+  font-family: inherit;
+  font-size: 1em;
+  font-weight: bold;
+  text-transform: uppercase; }
+
+.mk-btn--ghost-pill-emerald {
+  border: 2px solid transparent;
+  cursor: pointer;
+  display: inline-block;
+  outline: none;
+  padding: 0.75em 1.5em;
+  text-align: center;
+  text-decoration: none;
+  width: auto;
+  -webkit-appearance: none; }
+
+.mk-btn--ghost-pill-emerald {
+  background-color: transparent;
+  border-color: #2ecc71;
+  color: #2ecc71;
+  transition: all .2s ease;
+  border-radius: 10em; }
+.mk-btn--ghost-pill-emerald:hover, .mk-btn--ghost-pill-emerald:active {
+  background-color: #27ae60;
+  border-color: #27ae60;
+  color: #ffffff; }
+
+/*# sourceMappingURL=mk-btn-ghost-pill.css.map */

@@ -1,0 +1,37 @@
+// * ---------------------------------------------------------------------------    
+// 
+//       __ __  __
+//     /  /   /   /     __/__/__
+//     \ /   /   /  __   /  /  __  (/__
+//      /   /   / /  /  /  /  /__) /  /
+//     /   /   / (__/__/_ /__/____/  /_/
+//             \
+//               SOLUTIONS
+// 
+// 
+//	=Module - Btn / Buttons - Icon Pill Before
+//
+// 	Icon before - pill button style
+//
+// ---------------------------------------------------------------------------- */
+
+@mixin mk-create-btn--icon-pill-before( $bg, $bg--hover, $text, $text--hover, $accent, $misc ) {
+
+	overflow: hidden;
+	padding-left: 5em;
+	position: relative;
+	text-align: left;
+
+	.o-icon {
+
+		color: $misc;
+		font-size: 1.25em;
+		left: 1.5em;
+		margin-left: -.5em;
+		margin-top: -.5em;
+		position: absolute;
+		top: 50%;
+
+	}
+
+}

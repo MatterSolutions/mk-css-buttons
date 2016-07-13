@@ -1,0 +1,91 @@
+// * ---------------------------------------------------------------------------    
+// 
+//       __ __  __
+//     /  /   /   /     __/__/__
+//     \ /   /   /  __   /  /  __  (/__
+//      /   /   / /  /  /  /  /__) /  /
+//     /   /   / (__/__/_ /__/____/  /_/
+//             \
+//               SOLUTIONS
+// 
+// 
+//	=Module - Btn / Buttons - Vars
+//
+// 	Our colour variables etc for css output
+//
+// ---------------------------------------------------------------------------- */
+
+
+// Set the default to false
+$mk-btn-output-all-colours:                     null !default;
+
+
+// Base name
+$mk-component-btn-name:                         mk-btn !default;
+
+
+// Map with our project button colours
+$mk-component-btn-colors: (
+
+	emerald: (
+
+		bg: #2ecc71,
+		bg--hover: #27ae60,
+		text: #ffffff,
+		text--hover: #ffffff,
+		accent: #ffffff,
+		misc: #000000
+
+	),
+	peter-river: (
+
+		bg: #3498db,
+		bg--hover: #2980b9,
+		text: #ffffff,
+		text--hover: #ffffff,
+		accent: #ffffff,
+		misc: #000000
+
+	),
+	amethyst: (
+
+		bg: #9b59b6,
+		bg--hover: #8e44ad,
+		text: #ffffff,
+		text--hover: #ffffff,
+		accent: #ffffff,
+		misc: #000000
+
+	),
+	sun-flower: (
+
+		bg: #f1c40f,
+		bg--hover: #f39c12,
+		text: #ffffff,
+		text--hover: #ffffff,
+		accent: #ffffff,
+		misc: #000000
+
+	),
+	carrot: (
+
+		bg: #e67e22,
+		bg--hover: #d35400,
+		text: #ffffff,
+		text--hover: #ffffff,
+		accent: #ffffff,
+		misc: #000000
+
+	),
+	alizarin: (
+
+		bg: #e74c3c,
+		bg--hover: #c0392b,
+		text: #ffffff,
+		text--hover: #ffffff,
+		accent: #ffffff,
+		misc: #000000
+
+	)
+
+);

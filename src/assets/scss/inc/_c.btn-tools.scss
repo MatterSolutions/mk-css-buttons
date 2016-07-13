@@ -1,0 +1,216 @@
+// * ---------------------------------------------------------------------------    
+// 
+//       __ __  __
+//     /  /   /   /     __/__/__
+//     \ /   /   /  __   /  /  __  (/__
+//      /   /   / /  /  /  /  /__) /  /
+//     /   /   / (__/__/_ /__/____/  /_/
+//             \
+//               SOLUTIONS
+// 
+// 
+//	=Module - Btn / Buttons - Base Mixin
+//
+// 	Mixin to create a button
+//	Choose a mixin based on the 'type' supplied
+//
+// ---------------------------------------------------------------------------- */
+
+// Import our other mixins
+@import 'mixins/c.btn-mixin-block-icon';
+@import 'mixins/c.btn-mixin-draw-lines';
+@import 'mixins/c.btn-mixin-end-lines';
+@import 'mixins/c.btn-mixin-flat-shadow';
+@import 'mixins/c.btn-mixin-ghost';
+@import 'mixins/c.btn-mixin-ghost-fill';
+@import 'mixins/c.btn-mixin-grow';
+@import 'mixins/c.btn-mixin-icon-before';
+@import 'mixins/c.btn-mixin-icon-pill-before';
+@import 'mixins/c.btn-mixin-inset-arrow';
+@import 'mixins/c.btn-mixin-pill-border';
+@import 'mixins/c.btn-mixin-pill-translucent';
+@import 'mixins/c.btn-mixin-ripple';
+@import 'mixins/c.btn-mixin-split-fill';
+@import 'mixins/c.btn-mixin-square';
+@import 'mixins/c.btn-mixin-subtle-shadow';
+@import 'mixins/c.btn-mixin-subtle-text';
+@import 'mixins/c.btn-mixin-sweep';
+@import 'mixins/c.btn-mixin-transparent';
+@import 'mixins/c.btn-mixin-vanilla';
+
+
+@mixin mk-create-btn( $type, $bg, $bg--hover: darken( $bg-color, 5 ), $text: #ffffff, $text--hover: $text, $accent: #ffffff, $misc: #000000 ) {
+
+	@if ( $mk-btn-output-all-colours == null ) {
+
+		@extend %#{ $mk-component-btn-name };
+
+	}
+
+
+	@if ( $type == ghost ) {
+
+		@include mk-create-btn--ghost( $bg, $bg--hover, $text, $text--hover );
+
+	}
+
+	@elseif ( $type == pill ) {
+
+		@include mk-create-btn--vanilla( $bg, $bg--hover, $text, $text--hover );
+		border-radius: 10em;
+
+	}
+
+	@elseif ( $type == grow ) {
+
+		@include mk-create-btn--vanilla( $bg, $bg--hover, $text, $text--hover );
+		@include mk-create-btn--grow( $bg, $bg--hover, $text, $text--hover );
+		border-radius: 3px;
+
+	}
+
+
+	@elseif ( $type == sweep ) {
+
+		@include mk-create-btn--sweep( $bg, $bg--hover, $text, $text--hover, $accent, $misc );
+		
+	}
+
+
+	@elseif ( $type == split-fill ) {
+
+		@include mk-create-btn--vanilla( $bg, $bg--hover, $text, $text--hover );
+		@include mk-create-btn--split-fill( $bg, $bg--hover, $text, $text--hover );
+
+	}
+
+
+	@elseif ( $type == pill-translucent ) {
+
+		@include mk-create-btn--pill-translucent( $bg, $bg--hover, $text, $text--hover );
+		border-radius: 10em;
+
+	}
+
+
+	@elseif ( $type == ripple ) {
+
+		@include mk-create-btn--vanilla( $bg, $bg--hover, $text, $text--hover );
+		@include mk-create-btn--ripple( $bg, $bg--hover, $text, $text--hover, $accent );
+
+	}
+
+
+	@elseif ( $type == inset-arrow ) {
+
+		@include mk-create-btn--vanilla( $bg, $bg--hover, $text, $text--hover );
+		@include mk-create-btn--inset-arrow( $bg, $bg--hover, $text, $text--hover );
+
+	}
+
+
+	@elseif ( $type == icon-before ) {
+
+		@include mk-create-btn--vanilla( $bg, $bg--hover, $text, $text--hover );
+		@include mk-create-btn--icon-before( $bg, $bg--hover, $text, $text--hover, $accent, $misc );
+
+	}
+
+	@elseif ( $type == block-icon ) {
+
+		@include mk-create-btn--vanilla( $bg, $bg--hover, $text, $text--hover );
+		@include mk-create-btn--block-icon( $bg, $bg--hover, $text, $text--hover );
+
+	}
+
+	@elseif ( $type == icon-pill-before ) {
+
+		@include mk-create-btn--vanilla( $bg, $bg--hover, $text, $text--hover );
+		@include mk-create-btn--icon-pill-before( $bg, $bg--hover, $text, $text--hover, $accent, $misc );
+		border-radius: 10em;
+
+	}
+
+	@elseif ( $type == subtle-text ) {
+
+		@include mk-create-btn--vanilla( $bg, $bg--hover, $text, $text--hover );
+		@include mk-create-btn--subtle-text( $bg, $bg--hover, $text, $text--hover, $accent, $misc );
+
+	}
+
+	@elseif ( $type == ghost-fill ) {
+
+		@include mk-create-btn--ghost( $bg, $bg--hover, $text, $text--hover );
+		@include mk-create-btn--ghost-fill( $bg, $bg--hover, $text, $text--hover );
+
+	}
+
+	@elseif ( $type == ghost-pill ) {
+
+		@include mk-create-btn--ghost( $bg, $bg--hover, $text, $text--hover );
+		border-radius: 10em;
+
+	}
+
+	@elseif ( $type == transparent ) {
+
+		@include mk-create-btn--transparent( $bg, $bg--hover, $text, $text--hover );
+
+	}
+
+	@elseif ( $type == end-lines ) {
+
+		@include mk-create-btn--end-lines( $bg, $bg--hover, $text, $text--hover );
+
+	}
+
+	@elseif ( $type == square ) {
+
+		@include mk-create-btn--vanilla( $bg, $bg--hover, $text, $text--hover );
+		@include mk-create-btn--square( $bg, $bg--hover, $text, $text--hover );
+
+	}
+
+	@elseif ( $type == draw-lines ) {
+
+		@include mk-create-btn--draw-lines( $bg, $bg--hover, $text, $text--hover );
+
+	}
+
+	@elseif ( $type == round ) {
+
+		@include mk-create-btn--vanilla( $bg, $bg--hover, $text, $text--hover );
+		@include mk-create-btn--square( $bg, $bg--hover, $text, $text--hover );
+		border-radius: 50%;
+
+	}
+
+	@elseif ( $type == pill-border ) {
+
+		@include mk-create-btn--vanilla( $bg, $bg--hover, $text, $text--hover );
+		@include mk-create-btn--pill-border( $bg, $bg--hover, $text, $text--hover, $accent, $misc );
+		border-radius: 10em;
+
+	}
+
+	@elseif ( $type == flat-shadow ) {
+
+		@include mk-create-btn--vanilla( $bg, $bg--hover, $text, $text--hover );
+		@include mk-create-btn--flat-shadow( $bg, $bg--hover, $text, $text--hover, $accent, $misc );
+
+	}
+
+	@elseif ( $type == subtle-shadow ) {
+
+		@include mk-create-btn--vanilla( $bg, $bg--hover, $text, $text--hover );
+		@include mk-create-btn--subtle-shadow( $bg, $bg--hover, $text, $text--hover, $accent, $misc );
+
+	}
+
+	@else {
+
+		@include mk-create-btn--vanilla( $bg, $bg--hover, $text, $text--hover );
+
+	}
+
+}

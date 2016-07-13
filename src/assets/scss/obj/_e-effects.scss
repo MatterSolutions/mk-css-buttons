@@ -1,0 +1,80 @@
+.e-nudge {
+
+	&__item {
+
+		transform: translateX( 0 );
+		transition: all .2s ease;
+
+	}
+
+
+	&--right {
+
+		&:hover {
+
+			.e-nudge__item {
+
+				transform: translateX( .25em );
+
+			}
+
+		}
+
+	}
+
+
+	&--up {
+
+		&:hover {
+
+			.e-nudge__item {
+
+				transform: translateY( -.25em );
+
+			}
+
+		}
+
+	}
+
+}
+
+
+
+
+.e-reveal {
+
+	position: relative;
+
+	&__item {
+
+		transform: translateX( 100% );
+		transition: all .2s ease;
+
+	}
+
+
+	&--right {
+
+		.e-reveal__item {
+
+			margin-top: -.5em;
+			position: absolute;
+			right: -.5em;
+			top: 50%;
+
+		}
+
+		&:hover {
+
+			.e-reveal__item {
+
+				transform: translateX( -1.5em );
+
+			}
+
+		}
+
+	}
+
+}

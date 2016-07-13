@@ -1,0 +1,58 @@
+// * ---------------------------------------------------------------------------    
+// 
+//       __ __  __
+//     /  /   /   /     __/__/__
+//     \ /   /   /  __   /  /  __  (/__
+//      /   /   / /  /  /  /  /__) /  /
+//     /   /   / (__/__/_ /__/____/  /_/
+//             \
+//               SOLUTIONS
+// 
+// 
+//	=Module - Btn / Buttons - Ghost Fill
+//
+// 	Create a 'ghost' fill button
+//
+// ---------------------------------------------------------------------------- */
+
+@mixin mk-create-btn--ghost-fill( $bg, $bg--hover, $text, $text--hover ) {
+
+	overflow: hidden;
+	position: relative;
+
+	&:hover,
+	&:active {
+
+		background-color: transparent;
+		border-color: $bg--hover;
+		color: $text--hover;
+
+	}
+
+	&:before {
+
+		background-color: $bg--hover;
+		content: "";
+		display: inline-block;
+		height: 110%;
+		left: 50%;
+		opacity: 0;
+		position: absolute;
+		top: -5%;
+		transform: translateX( -50% );
+		transition: all .2s ease;
+		width: 0;
+		z-index: -1;
+
+	}
+
+	&:hover:before {
+
+		opacity: 1;
+		width: 110%;
+
+	}
+
+}
+
+

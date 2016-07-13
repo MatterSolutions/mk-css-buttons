@@ -1,0 +1,36 @@
+// * ---------------------------------------------------------------------------    
+// 
+//       __ __  __
+//     /  /   /   /     __/__/__
+//     \ /   /   /  __   /  /  __  (/__
+//      /   /   / /  /  /  /  /__) /  /
+//     /   /   / (__/__/_ /__/____/  /_/
+//             \
+//               SOLUTIONS
+// 
+// 
+//	=Module - Btn / Buttons - Flat Shadow
+//
+// 	Flat shadowed button style
+//
+// ---------------------------------------------------------------------------- */
+
+@mixin mk-create-btn--flat-shadow( $bg, $bg--hover, $text, $text--hover, $accent, $misc ) {
+
+	transition: all .2 ease;
+	box-shadow: 0 .25em $bg--hover;
+
+	&:hover {
+
+		box-shadow: 0 .25em $misc;
+
+	}
+
+	&:active {
+
+		box-shadow: 0 .125em $misc;
+ 		transform: translateY( .1em );
+
+	}
+
+}

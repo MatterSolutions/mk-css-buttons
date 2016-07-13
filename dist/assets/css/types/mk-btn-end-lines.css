@@ -1,0 +1,51 @@
+.mk-btn {
+  font-family: inherit;
+  font-size: 1em;
+  font-weight: bold;
+  text-transform: uppercase; }
+
+.mk-btn--end-lines-emerald {
+  border: 2px solid transparent;
+  cursor: pointer;
+  display: inline-block;
+  outline: none;
+  padding: 0.75em 1.5em;
+  text-align: center;
+  text-decoration: none;
+  width: auto;
+  -webkit-appearance: none; }
+
+.mk-btn--end-lines-emerald {
+  background-color: transparent;
+  border-color: transparent;
+  border-left: none;
+  border-right: none;
+  color: #2ecc71;
+  padding-left: 0;
+  padding-right: 0;
+  position: relative; }
+.mk-btn--end-lines-emerald:before, .mk-btn--end-lines-emerald:after {
+  background-color: #2ecc71;
+  content: "";
+  display: inline-block;
+  height: 2px;
+  left: 50%;
+  position: absolute;
+  transform: translate(-50%, 0);
+  transition: all .2s ease;
+  width: 100%; }
+.mk-btn--end-lines-emerald:before {
+  top: 0; }
+.mk-btn--end-lines-emerald:after {
+  bottom: 0; }
+.mk-btn--end-lines-emerald:hover, .mk-btn--end-lines-emerald:active {
+  background-color: transparent;
+  color: #27ae60; }
+.mk-btn--end-lines-emerald:hover:before, .mk-btn--end-lines-emerald:hover:after, .mk-btn--end-lines-emerald:active:before, .mk-btn--end-lines-emerald:active:after {
+  background: #27ae60; }
+.mk-btn--end-lines-emerald:hover:before, .mk-btn--end-lines-emerald:active:before {
+  transform: translate(-50%, -2px); }
+.mk-btn--end-lines-emerald:hover:after, .mk-btn--end-lines-emerald:active:after {
+  transform: translate(-50%, 2px); }
+
+/*# sourceMappingURL=mk-btn-end-lines.css.map */

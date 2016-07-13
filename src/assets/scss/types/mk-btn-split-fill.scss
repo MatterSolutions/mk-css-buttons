@@ -1,0 +1,96 @@
+// * ---------------------------------------------------------------------------    
+// 
+//       __ __  __
+//     /  /   /   /     __/__/__
+//     \ /   /   /  __   /  /  __  (/__
+//      /   /   / /  /  /  /  /__) /  /
+//     /   /   / (__/__/_ /__/____/  /_/
+//             \
+//               SOLUTIONS
+// 
+// 
+//	=Module - Btn / Buttons - Split Fill
+//
+// 	Create a fill effect from both ends of the button
+//
+// ---------------------------------------------------------------------------- */
+
+
+// Include dependencies
+@import '../inc/c.btn-dependencies';
+
+
+// Begin outputting the component
+.#{ $mk-component-btn-name } {
+
+	&--split-fill {
+
+		@if ( var_exists( $mk-btn-output-all-colours ) and $mk-btn-output-all-colours == true ) {
+
+			@include mk-base-btn();
+
+			@each $colour, $palette in $mk-component-btn-colors {
+
+				&-#{ $colour } {
+
+					@include mk-create-btn( 
+				
+						// Type
+						split-fill,
+
+						// BG colours
+						map-get( $palette, bg ), 
+						map-get( $palette, bg--hover ), 
+
+						// Text colours
+						map-get( $palette, text ),
+						map-get( $palette, text--hover ),
+
+						// Accent
+						map-get( $palette, accent ),
+
+						// Misc
+						map-get( $palette, misc )
+
+					);
+
+				}
+
+			}
+
+		}
+
+		@else {
+
+			&-emerald {
+
+				$palette: map-get( $mk-component-btn-colors, emerald );
+
+				@include mk-create-btn( 
+			
+					// Type
+					split-fill,
+
+					// BG colours
+					map-get( $palette, bg ), 
+					map-get( $palette, bg--hover ), 
+
+					// Text colours
+					map-get( $palette, text ),
+					map-get( $palette, text--hover ),
+
+					// Accent
+					map-get( $palette, accent ),
+
+					// Misc
+					map-get( $palette, misc )
+
+				);
+
+			}
+
+		}
+
+	} // split-fill
+
+}

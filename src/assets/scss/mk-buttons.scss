@@ -1,0 +1,63 @@
+// * ---------------------------------------------------------------------------    
+// 
+//       __ __  __
+//     /  /   /   /     __/__/__
+//     \ /   /   /  __   /  /  __  (/__
+//      /   /   / /  /  /  /  /__) /  /
+//     /   /   / (__/__/_ /__/____/  /_/
+//             \
+//               SOLUTIONS
+// 
+// 
+//	=Module - Btn / Buttons
+//
+// 	Include our buttons through mixins
+//
+// ---------------------------------------------------------------------------- */
+
+// Import the mixins for the different button types
+@import 'inc/c.btn-dependencies';
+
+
+// Effects
+@import 'obj/e-effects';
+
+
+$mk-btn-output-all-colours: true !global;
+
+
+// Import all the buttons
+@import 'types/mk-btn-vanilla';
+@import 'types/mk-btn-block-icon';
+@import 'types/mk-btn-draw-lines';
+@import 'types/mk-btn-end-lines';
+@import 'types/mk-btn-flat-shadow';
+@import 'types/mk-btn-ghost';
+@import 'types/mk-btn-ghost-fill';
+@import 'types/mk-btn-ghost-pill';
+@import 'types/mk-btn-grow';
+@import 'types/mk-btn-icon-before';
+@import 'types/mk-btn-icon-pill-before';
+@import 'types/mk-btn-inset-arrow';
+@import 'types/mk-btn-pill';
+@import 'types/mk-btn-pill-border';
+@import 'types/mk-btn-pill-translucent';
+@import 'types/mk-btn-ripple';
+@import 'types/mk-btn-round';
+@import 'types/mk-btn-split-fill';
+@import 'types/mk-btn-square';
+@import 'types/mk-btn-subtle-shadow';
+@import 'types/mk-btn-subtle-text';
+@import 'types/mk-btn-sweep';
+@import 'types/mk-btn-transparent';
+
+
+.#{ $mk-component-btn-name } {
+
+	&--fill {
+
+		width: 100%;
+
+	}
+
+}

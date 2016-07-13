@@ -1,0 +1,27 @@
+.mk-btn {
+  font-family: inherit;
+  font-size: 1em;
+  font-weight: bold;
+  text-transform: uppercase; }
+
+.mk-btn--vanilla-emerald {
+  border: 2px solid transparent;
+  cursor: pointer;
+  display: inline-block;
+  outline: none;
+  padding: 0.75em 1.5em;
+  text-align: center;
+  text-decoration: none;
+  width: auto;
+  -webkit-appearance: none; }
+
+.mk-btn--vanilla-emerald {
+  background-color: #2ecc71;
+  border-color: #2ecc71;
+  color: #ffffff; }
+.mk-btn--vanilla-emerald:hover, .mk-btn--vanilla-emerald:active {
+  background-color: #27ae60;
+  border-color: #27ae60;
+  color: #ffffff; }
+
+/*# sourceMappingURL=mk-btn-vanilla.css.map */

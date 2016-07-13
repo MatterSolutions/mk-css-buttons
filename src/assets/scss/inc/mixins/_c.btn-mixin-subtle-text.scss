@@ -1,0 +1,37 @@
+// * ---------------------------------------------------------------------------    
+// 
+//       __ __  __
+//     /  /   /   /     __/__/__
+//     \ /   /   /  __   /  /  __  (/__
+//      /   /   / /  /  /  /  /__) /  /
+//     /   /   / (__/__/_ /__/____/  /_/
+//             \
+//               SOLUTIONS
+// 
+// 
+//	=Module - Btn / Buttons - Subtle text
+//
+// 	Subtle text - overlaying decorative text
+//
+// ---------------------------------------------------------------------------- */
+
+@mixin mk-create-btn--subtle-text( $bg, $bg--hover, $text, $text--hover, $accent, $misc ) {
+
+	overflow: hidden;
+	position: relative;
+
+	&:after {
+
+		content: attr(data-btn-text);
+		font-size: 4em;
+		left: 50%;
+		opacity: .075;
+		position: absolute;
+		top: 50%;
+		transform: translate( -50%, -50% );
+		white-space: nowrap;
+		width: 100%;
+
+	}
+
+}

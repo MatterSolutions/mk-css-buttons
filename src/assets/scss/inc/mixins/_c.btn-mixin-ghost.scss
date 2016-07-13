@@ -1,0 +1,36 @@
+// * ---------------------------------------------------------------------------    
+// 
+//       __ __  __
+//     /  /   /   /     __/__/__
+//     \ /   /   /  __   /  /  __  (/__
+//      /   /   / /  /  /  /  /__) /  /
+//     /   /   / (__/__/_ /__/____/  /_/
+//             \
+//               SOLUTIONS
+// 
+// 
+//	=Module - Btn / Buttons - Ghost
+//
+// 	Create a 'ghosted' button
+//
+// ---------------------------------------------------------------------------- */
+
+@mixin mk-create-btn--ghost( $bg, $bg--hover, $text, $text--hover ) {
+
+	background-color: transparent;
+	border-color: $bg;
+	color: $text;
+	transition: all .2s ease;
+
+	&:hover,
+	&:active {
+
+		background-color: $bg--hover;
+		border-color: $bg--hover;
+		color: $text--hover;
+
+	}
+
+}
+
+

@@ -1,0 +1,48 @@
+// * ---------------------------------------------------------------------------    
+// 
+//       __ __  __
+//     /  /   /   /     __/__/__
+//     \ /   /   /  __   /  /  __  (/__
+//      /   /   / /  /  /  /  /__) /  /
+//     /   /   / (__/__/_ /__/____/  /_/
+//             \
+//               SOLUTIONS
+// 
+// 
+//	=Module - Btn / Buttons - Icon Before
+//
+// 	Icon before button style
+//
+// ---------------------------------------------------------------------------- */
+
+@mixin mk-create-btn--icon-before( $bg, $bg--hover, $text, $text--hover, $accent, $misc ) {
+
+	overflow: hidden;
+	padding-left: 6em;
+	position: relative;
+	text-align: left;
+
+	&:before {
+
+		background-color: rgba( $accent, $misc );
+		content: "";
+		height: 100%;
+		left: 0;
+		position: absolute;
+		top: 0;
+		width: 4em;
+
+	}
+
+	.o-icon {
+
+		font-size: 1.5em;
+		left: 2rem;
+		margin-left: -.5em;
+		margin-top: -.5em;
+		position: absolute;
+		top: 50%;
+
+	}
+
+}

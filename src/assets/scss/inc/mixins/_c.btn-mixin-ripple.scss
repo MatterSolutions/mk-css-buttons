@@ -1,0 +1,72 @@
+// * ---------------------------------------------------------------------------    
+// 
+//       __ __  __
+//     /  /   /   /     __/__/__
+//     \ /   /   /  __   /  /  __  (/__
+//      /   /   / /  /  /  /  /__) /  /
+//     /   /   / (__/__/_ /__/____/  /_/
+//             \
+//               SOLUTIONS
+// 
+// 
+//	=Module - Btn / Buttons - Ripple
+//
+// 	Ultra basic button style
+//
+// ---------------------------------------------------------------------------- */
+
+@mixin mk-create-btn--ripple( $bg, $bg--hover, $text, $text--hover, $accent ) {
+
+	border: none;
+	overflow: hidden;
+	position: relative;
+
+
+	.#{ $mk-component-btn-name }__text {
+
+		display: inline-block;
+		position: relative;
+		z-index: 3;
+
+	}
+
+
+	&:after,
+	&:before {
+
+		background-color: $accent;
+		border-radius: 50%;
+		content: "";
+		display: inline-block;
+		height: 0;
+		left: 50%;
+		opacity: 1;
+		position: absolute;
+		top: 50%;
+		transform: translate( -50%, -50% );
+		width: 0;
+		z-index: 1;
+
+	}
+
+
+	&:before {
+
+	}
+
+
+	&:hover,
+	&:active {
+
+		&:before {
+
+			opacity: 0;
+			padding-bottom: 120%;
+			transition: all .5s ease-in;
+			width: 120%;
+
+		}
+
+	}
+
+}

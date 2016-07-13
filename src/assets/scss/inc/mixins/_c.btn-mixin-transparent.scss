@@ -1,0 +1,33 @@
+// * ---------------------------------------------------------------------------    
+// 
+//       __ __  __
+//     /  /   /   /     __/__/__
+//     \ /   /   /  __   /  /  __  (/__
+//      /   /   / /  /  /  /  /__) /  /
+//     /   /   / (__/__/_ /__/____/  /_/
+//             \
+//               SOLUTIONS
+// 
+// 
+//	=Module - Btn / Buttons - Transparent
+//
+// 	Transparent button style
+//
+// ---------------------------------------------------------------------------- */
+
+@mixin mk-create-btn--transparent( $bg, $bg--hover, $text, $text--hover ) {
+
+	background-color: transparent;
+	border-color: transparent;
+	color: $text;
+
+	&:hover,
+	&:active {
+
+		background-color: transparent;
+		border-color: transparent;
+		color: $text--hover;
+
+	}
+
+}
